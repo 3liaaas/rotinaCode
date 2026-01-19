@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Rotina Semanal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            color: #333;
+            margin: 30px 0 15px 0;
+            font-size: 22px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        thead {
+            background-color: #e0e0e0;
+        }
+        
+        th {
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            color: #444;
+            border-bottom: 2px solid #ccc;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pessoal { background-color: #DBEAFE; }
+        .academia { background-color: #D1FAE5; }
+        .estudo { background-color: #E9D5FF; }
+        .trabalho { background-color: #FED7AA; }
+        .sono { background-color: #C7D2FE; }
+        .livre { background-color: #FBCFE8; }
+        
+        .legenda {
+            background-color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            margin-top: 30px;
+        }
+        
+        .legenda h4 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .legenda-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .legenda-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cor-box {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #999;
+            border-radius: 4px;
+        }
+        
+        .resumo, .dicas {
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            margin-top: 20px;
+        }
+        
+        .resumo {
+            background-color: #FEF3C7;
+            border-color: #FCD34D;
+        }
+        
+        .dicas {
+            background-color: #DBEAFE;
+            border-color: #93C5FD;
+        }
+        
+        .resumo h4, .dicas h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        ul {
+            margin-left: 20px;
+        }
+        
+        li {
+            margin: 8px 0;
+            color: #444;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Minha Rotina Semanal</h1>
+        <p class="subtitle">Trabalho • Estudos • Academia • Descanso</p>
+        
+        <h3>Segunda a Sexta-feira</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    <th>Atividade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="pessoal">
+                    <td><strong>6h30 - 7h00</strong></td>
+                    <td>Acordar e preparação matinal</td>
+                </tr>
+                <tr class="academia">
+                    <td><strong>7h00 - 9h00</strong></td>
+                    <td>Academia (treino + deslocamento)</td>
+                </tr>
+                <tr class="pessoal">
+                    <td><strong>9h00 - 9h30</strong></td>
+                    <td>Banho e lanche pós-treino</td>
+                </tr>
+                <tr class="estudo">
+                    <td><strong>9h30 - 11h00</strong></td>
+                    <td>Estudos (1h30 focado)</td>
+                </tr>
+                <tr class="pessoal">
+                    <td><strong>11h00 - 12h00</strong></td>
+                    <td>Almoço e preparação</td>
+                </tr>
+                <tr class="trabalho">
+                    <td><strong>12h00 - 12h45</strong></td>
+                    <td>Deslocamento para o trabalho</td>
+                </tr>
+                <tr class="trabalho">
+                    <td><strong>13h00 - 22h00</strong></td>
+                    <td>Trabalho</td>
+                </tr>
+                <tr class="trabalho">
+                    <td><strong>22h00 - 22h45</strong></td>
+                    <td>Volta para casa</td>
+                </tr>
+                <tr class="pessoal">
+                    <td><strong>22h45 - 00h00</strong></td>
+                    <td>Jantar e descompressão</td>
+                </tr>
+                <tr class="sono">
+                    <td><strong>00h00 - 6h30</strong></td>
+                    <td>Sono (6h30)</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Sábado</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    <th>Atividade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="academia">
+                    <td><strong>7h30 - 9h00</strong></td>
+                    <td>Acordar e academia</td>
+                </tr>
+                <tr class="pessoal">
+                    <td><strong>9h00 - 10h00</strong></td>
+                    <td>Banho e preparação</td>
+                </tr>
+                <tr class="trabalho">
+                    <td><strong>10h00 - 14h00</strong></td>
+                    <td>Trabalho</td>
+                </tr>
+                <tr class="livre">
+                    <td><strong>14h00 em diante</strong></td>
+                    <td>Livre (descanso, lazer, estudos)</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Domingo</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    <th>Atividade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="livre">
+                    <td><strong>Flexível</strong></td>
+                    <td>Descanso, recuperação, lazer e estudos complementares</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="legenda">
+            <h4>Legenda de Cores:</h4>
+            <div class="legenda-grid">
+                <div class="legenda-item">
+                    <div class="cor-box pessoal"></div>
+                    <span>Pessoal</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="cor-box academia"></div>
+                    <span>Academia</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="cor-box estudo"></div>
+                    <span>Estudos</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="cor-box trabalho"></div>
+                    <span>Trabalho</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="cor-box sono"></div>
+                    <span>Sono</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="cor-box livre"></div>
+                    <span>Livre</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="resumo">
+            <h4>📊 Resumo Semanal:</h4>
+            <ul>
+                <li><strong>Sono:</strong> 6h30 por noite (dias de semana)</li>
+                <li><strong>Estudos:</strong> 1h30/dia (seg-sex) = 7h30/semana mínimo</li>
+                <li><strong>Academia:</strong> 5-6x por semana</li>
+                <li><strong>Trabalho:</strong> 49h/semana</li>
+            </ul>
+        </div>
+        
+        <div class="dicas">
+            <h4>💡 Dicas para o Sucesso:</h4>
+            <ul>
+                <li>Prepare roupa da academia e materiais de estudo na noite anterior</li>
+                <li>Use o domingo para meal prep da semana</li>
+                <li>Respeite o horário de dormir (00h00)</li>
+                <li>Ajuste conforme necessário, mas mantenha a consistência</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
